@@ -14,7 +14,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.template('model.php', 'app/' + this.spaceName + '/Model/' + this.classedName + 'Model.php'),
+    this.template('model.php', 'app/' + this.spaceName + '/Model/' + this.classedName + 'Model.class.php'),
       { classedName: this.classedName, spaceName: this.spaceName };
 
   },

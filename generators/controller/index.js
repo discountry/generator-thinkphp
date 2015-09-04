@@ -14,7 +14,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.template('controller.php', 'app/' + this.spaceName + '/Controller/' + this.classedName + 'Controller.php'),
+    this.template('controller.php', 'app/' + this.spaceName + '/Controller/' + this.classedName + 'Controller.class.php'),
       { classedName: this.classedName, spaceName: this.spaceName };
     this.template('view.html', 'app/' + spaceName + '/View/' + 'index.html'),
       { classedName: this.classedName };
