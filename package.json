@@ -1,6 +1,6 @@
 {
   "name": "generator-thinkphp",
-  "version": "0.2.21",
+  "version": "0.2.22",
   "description": "Yeoman generator for thinkphp",
   "main": "index.js",
   "files": [
