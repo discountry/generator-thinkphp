@@ -1,28 +1,30 @@
 {
   "name": "generator-thinkphp",
-  "version": "0.2.20",
-  "description": "thinkphp project yeoman generator",
+  "version": "0.2.21",
+  "description": "Yeoman generator for thinkphp",
   "main": "index.js",
   "files": [
     "app",
-    "router"
+    "controller",
+    "model",
+    "space"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "generator",
+    "thinkphp"
   ],
   "author": "discountry",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/discountry/generator-thinkphp.git"
+  "repository": "discountry/generator-thinkphp",
+  "scripts": {
+    "test": "mocha"
   },
   "dependencies": {
     "chalk": "^1.1.1",
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
-    "yeoman-generator": "^0.20.1"
+    "yeoman-generator": "^0.20.1",
+    "mocha": "*"
   }
 }
