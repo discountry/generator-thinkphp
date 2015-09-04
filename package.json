@@ -1,13 +1,11 @@
 {
   "name": "generator-thinkphp",
-  "version": "0.2.23",
+  "version": "0.2.24",
   "description": "Yeoman generator for thinkphp",
   "main": "index.js",
   "files": [
-    "app",
-    "controller",
-    "model",
-    "space"
+    "generators",
+    "test"
   ],
   "keywords": [
     "yeoman-generator",
