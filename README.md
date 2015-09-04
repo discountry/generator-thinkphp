@@ -73,7 +73,7 @@ class IndexController extends Controller {
 }
 ```
 
-Produces `app/Home/View/index.html`:
+Produces `app/Home/View/Index/index.html`:
 
 ```html
 <extend name="base" />
