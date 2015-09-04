@@ -12,7 +12,7 @@ mv composer.phar /usr/local/bin/composer
 ```
 
 
-Install `yo` and `generator-thinkphp`:
+Install `yo` and `generator-thinkphp` [Read more about Yeoman](http://yeoman.io/)
 ```
 npm install -g yo generator-thinkphp
 ```
