@@ -132,6 +132,17 @@ Example:
 yo thinkphp:space Admin
 ```
 
+Produces `app/Admin` folder and default files in your project.
+
+* Admin 
+	* Common
+	* Conf 
+	* Controller 
+	* Model 
+	* View 
+	* index.html
+
+
 ### Serve
 
 Run a PHP Test Server locally.
@@ -142,16 +153,6 @@ yo thinkphp:serve
 ```
 
 And you'll get a php server running at 127.0.0.1:3000.
-
-Produces `app/Admin` folder and default files in your project.
-
-* Admin 
-	* Common
-	* Conf 
-	* Controller 
-	* Model 
-	* View 
-	* index.html
 
 ## About 
 
