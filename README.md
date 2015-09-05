@@ -3,7 +3,7 @@
 > Yeoman generator for ThinkPHP - Create ThinkPHP Project and generate Controller/Model/View for it.
 
 
-##Usage
+## Usage
 
 Install `Composer` [Read more about composer](https://getcomposer.org/)
 ```
