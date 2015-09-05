@@ -18,7 +18,7 @@ module.exports = generators.Base.extend({
       { classedName: this.classedName, spaceName: this.spaceName };
     this.template('view.html', 'app/' + this.spaceName + '/View/'+ this.classedName + '/index.html'),
       { classedName: this.classedName };
-    this.template('_base.html', 'app/' + this.spaceName + '/View/base.html'),
+    this.template('_base.html', 'app/' + this.spaceName + '/View/'+ this.classedName + '/base.html'),
       { classedName: this.classedName };
   },
 });
