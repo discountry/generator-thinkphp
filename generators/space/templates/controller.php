@@ -1,11 +1,8 @@
 <?php
 namespace <%= spaceName %>\Controller;
 use Think\Controller;
-class <%= classedName %>Controller extends Controller {
-
+class IndexController extends Controller {
     public function index(){
         $this->display();
     }
-
-
 }

@@ -1,6 +1,6 @@
 {
   "name": "generator-thinkphp",
-  "version": "0.2.32",
+  "version": "0.2.33",
   "description": "Yeoman generator for thinkphp",
   "main": "index.js",
   "files": [
@@ -12,9 +12,14 @@
     "generator",
     "thinkphp"
   ],
-  "author": "discountry",
+  "author": {
+    "name": "discountry"
+  },
   "license": "MIT",
-  "repository": "discountry/generator-thinkphp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discountry/generator-thinkphp.git"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -25,5 +30,31 @@
     "mocha": "*",
     "yeoman-generator": "^0.20.1",
     "yeoman-welcome": "^1.0.1"
-  }
+  },
+  "gitHead": "c26aafc524fa8645195490d65a11e5e33d9a66ef",
+  "bugs": {
+    "url": "https://github.com/discountry/generator-thinkphp/issues"
+  },
+  "homepage": "https://github.com/discountry/generator-thinkphp#readme",
+  "_id": "generator-thinkphp@0.2.32",
+  "_shasum": "80db3e3cf52a632562f9f07eeaf378b5cf1d2c8d",
+  "_from": "generator-thinkphp@*",
+  "_npmVersion": "2.9.1",
+  "_nodeVersion": "0.12.3",
+  "_npmUser": {
+    "name": "discountry",
+    "email": "feibilanceon@gmail.com"
+  },
+  "dist": {
+    "shasum": "80db3e3cf52a632562f9f07eeaf378b5cf1d2c8d",
+    "tarball": "http://registry.npmjs.org/generator-thinkphp/-/generator-thinkphp-0.2.32.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "discountry",
+      "email": "feibilanceon@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/generator-thinkphp/-/generator-thinkphp-0.2.32.tgz"
 }

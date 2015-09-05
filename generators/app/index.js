@@ -9,7 +9,8 @@ var mkdirp = require('mkdirp');
 module.exports = generators.Base.extend({
 	initializing: function() {
 		this.log(welcome);
-	    this.log(chalk.red.bold('Please run these commands in the ROOT of your working folder!') + '\n');
+		this.log(chalk.blue('You are using Yeoman ThinkPHP generator by @discounty. \n'))
+	    this.log(chalk.red.bold('Please run these commands in the ROOT of your working folder! \n'));
 	    this.log('Destination is: ' + chalk.bold(this.destinationRoot()));
 	    this.log('Source is: ' + chalk.bold(this.sourceRoot()) + '\n');
 	},
@@ -29,10 +30,11 @@ module.exports = generators.Base.extend({
 	        this.prompt(prompts, function (answers) {
 	          if (answers.continue) {
 	            // Use the secondary installation method as we cannot assume curl is installed
-	            this.spawnCommand('php -r "readfile(\'https://getcomposer.org/installer\');" | php');
-	            console.log('Installing composer locally.');
+	            exec('php -r "readfile(\'https://getcomposer.org/installer\');" | php');
+	            console.log(chakl.green('Installing composer locally.'));
 	            console.log('See http://getcomposer.org for more details on composer.');
-	            console.log('');
+	            console.log('Please run: \n' + chalk.bold('mv composer.phar /usr/local/bin/composer') + '\nafter install...');
+	            return false;
 	            done();
 	          }
 	        }.bind(this));
@@ -55,7 +57,7 @@ module.exports = generators.Base.extend({
 
 	       this.prompt(prompts, function (answers) {
 		      this.appName = answers.name;
-	      	  this.log('Your app name is: ' + chalk.bold(this.appName) + '\n');
+	      	  this.log('Your app name is: ' + chalk.blue.bold(this.appName) + '\n');
 
 		      this.runServer = answers.run;
 
