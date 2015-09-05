@@ -83,7 +83,7 @@ Produces `app/Home/View/Index/index.html`:
 </block>
 ```
 
-Produces `app/Home/View/base.html`:
+Produces `app/Home/View/Index/base.html`:
 
 ```html
 <!DOCTYPE html>
