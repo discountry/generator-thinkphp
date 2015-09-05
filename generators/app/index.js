@@ -1,5 +1,6 @@
 'use strict';
 var generators = require('yeoman-generator');
+var welcome = require('yeoman-welcome');
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
 var chalk = require('chalk');
@@ -7,7 +8,7 @@ var mkdirp = require('mkdirp');
 
 module.exports = generators.Base.extend({
 	initializing: function() {
-		this.welcome();
+		this.log(welcome);
 	    this.log(chalk.red.bold('Please run these commands in the ROOT of your working folder!') + '\n');
 	    this.log('Destination is: ' + chalk.bold(this.destinationRoot()));
 	    this.log('Source is: ' + chalk.bold(this.sourceRoot()) + '\n');
@@ -42,13 +43,13 @@ module.exports = generators.Base.extend({
 	        var prompts = [{
 			      type    : 'input',
 			      name    : 'name',
-			      message : 'Your project name',
+			      message : 'Your project name: ',
 			      store   : true,
 			      default : this.appname // Default to current folder name
 			    }, {
 			      type    : 'confirm',
 			      name    : 'run',
-			      message : 'Run PHP test server now?',
+			      message : 'Run PHP test server after Install?',
 			      default : false
 			    }];
 
@@ -64,15 +65,18 @@ module.exports = generators.Base.extend({
 		}.bind(this));
 	},
 
+	configureing: function() {
+		this.config.set('appName', this.appName);
+		this.config.save();
+		this.log(chalk.yellow('Configure saved!'));
+	},
+
 	  writing: function() {
 	    this.copy('_.htaccess', '.htaccess');
-	    this.copy('_.yo-rc.json', '.yo-rc.json');
-	    this.template('_base.html', 'app/Home/View/base.html'),
-	    {appName: this.appName};
 	    this.copy('_index.php', 'index.php');
 	    this.template('_composer.json', 'composer.json'),
 	    {appName: this.appName};
-	    mkdirp('public');
+	    mkdirp('public', 755);
 	    this.log(chalk.yellow('Scaffolding files installing!'));
 	  },
 

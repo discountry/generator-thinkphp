@@ -11,7 +11,6 @@ module.exports = generators.Base.extend({
     this.spaceName = _.startCase(this.spaceName);
     this.appName = this.appname;
 
-    this.log(this.appname);
   },
 
   writing: function () {

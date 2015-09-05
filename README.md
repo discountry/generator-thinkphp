@@ -35,6 +35,7 @@ Available generators:
 * [thinkphp:controller](#controller)
 * [thinkphp:model](#model)
 * [thinkphp:space](#space)
+* [thinkphp:serve](#serve)
 
 ### App
 
@@ -76,10 +77,29 @@ class IndexController extends Controller {
 Produces `app/Home/View/Index/index.html`:
 
 ```html
-<extend name="base" />
+<extend name="/base" />
 <block name="content">
 	<h1>Index</h1>
 </block>
+```
+
+Produces `app/Home/View/base.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Home</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <block name="content"></block>
+</body>
+</html>
 ```
 
 ### Model
@@ -111,6 +131,17 @@ Example:
 ```bash
 yo thinkphp:space Admin
 ```
+
+### Serve
+
+Run a PHP Test Server locally.
+
+Example:
+```bash 
+yo thinkphp:serve 
+```
+
+And you'll get a php server running at 127.0.0.1:3000.
 
 Produces `app/Admin` folder and default files in your project.
 
