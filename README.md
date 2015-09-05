@@ -77,7 +77,7 @@ class IndexController extends Controller {
 Produces `app/Home/View/Index/index.html`:
 
 ```html
-<extend name="./base" />
+<extend name="base" />
 <block name="content">
 	<h1>Index</h1>
 </block>
