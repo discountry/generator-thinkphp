@@ -161,4 +161,4 @@ Thinkphp的命令行自动构建工具，类似 [Laravel](http://laravel.com) �
 
 ## 许可证
 
-MIT
+[MIT](/LICENSE)
