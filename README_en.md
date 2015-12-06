@@ -2,7 +2,7 @@
 
 > Yeoman generator for ThinkPHP - Create ThinkPHP Project and generate Controller/Model/View for it.
 
-[中文文档](/README_zh.md)
+[中文文档](/README.md)
 
 ## Usage
 
