@@ -1,4 +1,4 @@
-# Thinkphp 生成器
+# Thinkphp Generator | Thinkphp 生成器
 
 > 利用yeoman自动构建thinkphp应用 - 通过命令行自动创建应用以及 Controller/Model/View.
 
