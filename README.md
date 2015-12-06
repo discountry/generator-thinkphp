@@ -2,6 +2,7 @@
 
 > 利用yeoman自动构建thinkphp应用 - 通过命令行自动创建应用以及 Controller/Model/View.
 
+[English Doc](/README_en.md)
 
 ## 使用方法
 
