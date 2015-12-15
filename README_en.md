@@ -18,10 +18,11 @@ Install `yo` and `generator-thinkphp` [Read more about Yeoman](http://yeoman.io/
 npm install -g yo generator-thinkphp
 ```
 
-Make a new directory, and `cd` into it:
+Then `cd` into your workplace:
 ```
-mkdir my-new-project && cd $_
+cd [your-workplace]
 ```
+**The `your-workplace` means any folder that you would like to put your codes in.**
 
 Run `yo thinkphp` to init your project, and follow the steps:
 ```

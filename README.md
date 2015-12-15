@@ -18,12 +18,13 @@ mv composer.phar /usr/local/bin/composer
 npm install -g yo generator-thinkphp
 ```
 
-创建应用文件夹, cd 进入以进行下一步操作:
+`cd` 进入到你的工作文件夹以进行下一步操作:
 ```
-mkdir my-new-project && cd $_
+cd [your-workplace]
 ```
+**`your-workplace`是指你平时写代码的文件夹**
 
-输入 `yo thinkphp` 来初始化应用，会有一些自定义选项，根据指引输入:
+输入 `yo thinkphp` 来生成应用，会有一些自定义选项，根据指引输入:
 ```
 yo thinkphp
 ```
