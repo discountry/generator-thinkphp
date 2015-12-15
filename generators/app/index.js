@@ -48,18 +48,11 @@ module.exports = generators.Base.extend({
 			      message : 'Your project name: ',
 			      store   : true,
 			      default : this.appname // Default to current folder name
-			    }, {
-			      type    : 'confirm',
-			      name    : 'run',
-			      message : 'Run PHP test server after Install?',
-			      default : false
 			    }];
 
 	       this.prompt(prompts, function (answers) {
 		      this.appName = answers.name;
 	      	  this.log('Your app name is: ' + chalk.blue.bold(this.appName) + '\n');
-
-		      this.runServer = answers.run;
 
 		      done();
 		    }.bind(this));
@@ -86,14 +79,9 @@ module.exports = generators.Base.extend({
 	  },
 
 	  end: function() {
-			this.copy('_index.php', this.appName ＋ 'index.php');
-			
-	  	if (this.runServer) {
-	  		this.spawnCommand('cd', [this.appName, '&&', 'php', '-S', '127.0.0.1:3000']);
-	  		return;
-	  	};
+		this.copy('_index.php', this.appName + '/index.php');
 
-	  	this.log(chalk.green.bold('All done have fun!'));
+	  	this.log(chalk.blue('Then', chalk.green.bold('cd') +' into ' + chalk.green.bold(this.appName) + ' and start coding!'));
 	  }
 
 
