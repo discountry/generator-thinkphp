@@ -20,14 +20,20 @@ npm install -g yo generator-thinkphp
 
 Then `cd` into your workplace:
 ```
-cd [your-workplace]
+cd [workPlace]
 ```
-**The `your-workplace` means any folder that you would like to put your codes in.**
+**The `workPlace` means any folder that you would like to put your codes in.**
 
-Run `yo thinkphp` to init your project, and follow the steps:
+Run `yo thinkphp` to init your project, and follow the steps,you can name your app & install `Composer` and so on:
 ```
 yo thinkphp
 ```
+
+type `cd [appName]` get into your app and start coding:
+```
+cd [appName]
+```
+**`appName` is your custome app name**
 
 ## Generators
 

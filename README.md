@@ -20,14 +20,20 @@ npm install -g yo generator-thinkphp
 
 `cd` 进入到你的工作文件夹以进行下一步操作:
 ```
-cd [your-workplace]
+cd [workPlace]
 ```
-**`your-workplace`是指你平时写代码的文件夹**
+**`workPlace`是指你平时写代码的文件夹**
 
-输入 `yo thinkphp` 来生成应用，会有一些自定义选项，根据指引输入:
+输入 `yo thinkphp` 来生成应用，根据指引输入，你可以自定义应用名称，如果你未安装 `Composer` 会有安装提示是否自动安装:
 ```
 yo thinkphp
 ```
+
+输入 `cd [appName]` 进入你的应用目录，开始一下步操作:
+```
+cd [appName]
+```
+**`appName`是指你自定义应用的名称**
 
 ## 自动生成器
 
