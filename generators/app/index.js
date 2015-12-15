@@ -86,11 +86,10 @@ module.exports = generators.Base.extend({
 	  },
 
 	  end: function() {
-			this.spawnCommandSync('cd', [this.appName]);
-			this.copy('_index.php', 'index.php');
+			this.copy('_index.php', this.appName ＋ 'index.php');
 			
 	  	if (this.runServer) {
-	  		this.spawnCommand('php', ['-S', '127.0.0.1:3000']);
+	  		this.spawnCommand('cd', [this.appName, '&&', 'php', '-S', '127.0.0.1:3000']);
 	  		return;
 	  	};
 
