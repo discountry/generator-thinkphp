@@ -60,7 +60,7 @@ Example:
 yo thinkphp:controller Index Home
 ```
 
-此命令生成 `app/Home/Controller/IndexController.class.php`:
+此命令生成 `Application/Home/Controller/IndexController.class.php`:
 ```php
 <?php
 namespace Home\Controller;
@@ -75,7 +75,7 @@ class IndexController extends Controller {
 }
 ```
 
-以及 `app/Home/View/Index/index.html`:
+以及 `Application/Home/View/Index/index.html`:
 
 ```html
 <extend name="base" />
@@ -84,7 +84,7 @@ class IndexController extends Controller {
 </block>
 ```
 
-以及 `app/Home/View/Index/base.html`:
+以及 `Application/Home/View/Index/base.html`:
 
 ```html
 <!DOCTYPE html>
@@ -112,14 +112,14 @@ Example:
 yo thinkphp:model User Home
 ```
 
-生成 `app/Home/Model/UserModel.class.php`:
+生成 `Application/Home/Model/UserModel.class.php`:
 ```php
 <?php
 namespace Home\Model;
 use Think\Model;
 class UserModel extends Model {
 	//
-    protected $tableName = 'User'; 
+    protected $tableName = 'User';
 
 }
 ```
@@ -133,14 +133,14 @@ Example:
 yo thinkphp:space Admin
 ```
 
-生成 `app/Admin` 文件夹以及初始内容.
+生成 `Application/Admin` 文件夹以及初始内容.
 
-* Admin 
+* Admin
 	* Common
-	* Conf 
-	* Controller 
-	* Model 
-	* View 
+	* Conf
+	* Controller
+	* Model
+	* View
 	* index.html
 
 
@@ -149,8 +149,8 @@ yo thinkphp:space Admin
 运行本地的php测试服务器，此功能例如php自带的测试服务器实现.
 
 Example:
-```bash 
-yo thinkphp:serve 
+```bash
+yo thinkphp:serve
 ```
 
 你的测试服务器运行在 127.0.0.1:3000.

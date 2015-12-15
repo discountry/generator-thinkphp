@@ -38,7 +38,7 @@ module.exports = generators.Base.extend({
 	            done();
 	          }
 	        }.bind(this));
-	      } 
+	      }
 	      else {
 	        this.globalComposer = true;
 	        this.log(chalk.green('Composer installed ready!'+ '\n'));
@@ -74,22 +74,25 @@ module.exports = generators.Base.extend({
 	},
 
 	  writing: function() {
-	    this.copy('_.htaccess', '.htaccess');
-	    this.copy('_index.php', 'index.php');
-	    this.template('_composer.json', 'composer.json'),
-	    {appName: this.appName};
-	    mkdirp('public', 755);
+	    // this.copy('_.htaccess', '.htaccess');
+	    // this.copy('_index.php', 'index.php');
+	    // this.template('_composer.json', 'composer.json'),
+	    // {appName: this.appName};
+	    // mkdirp('public', 755);
 	    this.log(chalk.yellow('Scaffolding files installing!'));
 	  },
 
 	  install: function() {
 	  	var done = this.async();
-	    this.spawnCommand('composer', ['install']).on('close', function () {
+	    this.spawnCommand('composer', ['create-project', 'topthink/thinkphp', this.appName]).on('close', function () {
 	                done();
 	            });
 	  },
 
 	  end: function() {
+			this.spawnCommand('cd', [this.appName]);
+			this.copy('_index.php', 'index.php');
+			
 	  	if (this.runServer) {
 	  		this.spawnCommand('php', ['-S', '127.0.0.1:3000']);
 	  		return;

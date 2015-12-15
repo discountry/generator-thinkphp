@@ -32,7 +32,7 @@ yo thinkphp
 
 Available generators:
 
-* [thinkphp](#app) (aka [thinkphp:app](#app))
+* [thinkphp](#Application) (aka [thinkphp:Application](#Application))
 * [thinkphp:controller](#controller)
 * [thinkphp:model](#model)
 * [thinkphp:space](#space)
@@ -49,7 +49,7 @@ yo thinkphp
 
 ### Controller
 
-Generates a controller and view for your app. Command like `yo thinkphp:controller [classedName] [spaceName]`.
+Generates a controller and view for your Application. Command like `yo thinkphp:controller [classedName] [spaceName]`.
 
 **The `classedName` is required value, without it will get error.**
 
@@ -60,7 +60,7 @@ Example:
 yo thinkphp:controller Index Home
 ```
 
-Produces `app/Home/Controller/IndexController.class.php`:
+Produces `Application/Home/Controller/IndexController.class.php`:
 ```php
 <?php
 namespace Home\Controller;
@@ -75,7 +75,7 @@ class IndexController extends Controller {
 }
 ```
 
-Produces `app/Home/View/Index/index.html`:
+Produces `Application/Home/View/Index/index.html`:
 
 ```html
 <extend name="base" />
@@ -84,7 +84,7 @@ Produces `app/Home/View/Index/index.html`:
 </block>
 ```
 
-Produces `app/Home/View/Index/base.html`:
+Produces `Application/Home/View/Index/base.html`:
 
 ```html
 <!DOCTYPE html>
@@ -112,35 +112,35 @@ Example:
 yo thinkphp:model User Home
 ```
 
-Produces `app/Home/Model/UserModel.class.php`:
+Produces `Application/Home/Model/UserModel.class.php`:
 ```php
 <?php
 namespace Home\Model;
 use Think\Model;
 class UserModel extends Model {
 	//
-    protected $tableName = 'User'; 
+    protected $tableName = 'User';
 
 }
 ```
 
 ### Space
 
-Create a new namespace folder for you app.
+Create a new namespace folder for you Application.
 
 Example:
 ```bash
 yo thinkphp:space Admin
 ```
 
-Produces `app/Admin` folder and default files in your project.
+Produces `Application/Admin` folder and default files in your project.
 
-* Admin 
+* Admin
 	* Common
-	* Conf 
-	* Controller 
-	* Model 
-	* View 
+	* Conf
+	* Controller
+	* Model
+	* View
 	* index.html
 
 
@@ -149,13 +149,13 @@ Produces `app/Admin` folder and default files in your project.
 Run a PHP Test Server locally.
 
 Example:
-```bash 
-yo thinkphp:serve 
+```bash
+yo thinkphp:serve
 ```
 
 And you'll get a php server running at 127.0.0.1:3000.
 
-## About 
+## About
 
 Add command line tools for ThinkPHP. Just like [Laravel](http://laravel.com)'s `php artisan`
 

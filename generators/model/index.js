@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 module.exports = generators.Base.extend({
    constructor: function () {
-    generators.Base.apply(this, arguments);
+    generators.Base.Applicationly(this, arguments);
     // This makes `arguments` a required argument.
     this.argument('classedName', { type: String, required: true });
     this.argument('spaceName', { type: String, optional: true, defaults: 'Home' });
@@ -14,7 +14,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.template('model.php', 'app/' + this.spaceName + '/Model/' + this.classedName + 'Model.class.php'),
+    this.template('model.php', 'Application/' + this.spaceName + '/Model/' + this.classedName + 'Model.class.php'),
       { classedName: this.classedName, spaceName: this.spaceName };
 
   },

@@ -1,6 +1,0 @@
-{
-    "name": "<%= appName %>",
-    "require": {
-        "topthink/thinkphp": "dev-master"
-    }
-}
