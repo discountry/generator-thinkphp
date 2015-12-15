@@ -74,12 +74,8 @@ module.exports = generators.Base.extend({
 	},
 
 	  writing: function() {
-	    // this.copy('_.htaccess', '.htaccess');
-	    // this.copy('_index.php', 'index.php');
-	    // this.template('_composer.json', 'composer.json'),
-	    // {appName: this.appName};
-	    // mkdirp('public', 755);
-	    this.log(chalk.yellow('Scaffolding files installing!'));
+
+	    this.log(chalk.magenta('Please wait for the installing...'));
 	  },
 
 	  install: function() {
@@ -90,7 +86,7 @@ module.exports = generators.Base.extend({
 	  },
 
 	  end: function() {
-			this.spawnCommand('cd', [this.appName]);
+			this.spawnCommandSync('cd', [this.appName]);
 			this.copy('_index.php', 'index.php');
 			
 	  	if (this.runServer) {
