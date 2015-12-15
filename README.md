@@ -24,7 +24,8 @@ cd [workPlace]
 ```
 **`workPlace`是指你平时写代码的文件夹**
 
-输入 `yo thinkphp` 来生成应用，根据指引输入，你可以自定义应用名称，如果你未安装 `Composer` 会有安装提示是否自动安装:
+
+输入 `yo thinkphp` 来生成应用，根据指引输入，你可以自定义应用名称，如果你未安装 `Composer` 会有提示是否自动安装:
 ```
 yo thinkphp
 ```
@@ -34,6 +35,7 @@ yo thinkphp
 cd [appName]
 ```
 **`appName`是指你自定义应用的名称**
+
 
 ## 自动生成器
 
