@@ -9,14 +9,13 @@ module.exports = generators.Base.extend({
     this.argument('spaceName', { type: String, required: true, defaults: 'Admin' });
     // And you can then access it later on this way; e.g. CamelCased
     this.spaceName = _.startCase(this.spaceName);
-    this.appName = this.config.get('appName');
 
   },
 
 
   writing: function () {
 
-    this.directory('space', this.appName + '/Application/' + this.spaceName),
+    this.directory('space', 'Application/' + this.spaceName),
     { spaceName: this.spaceName };
     this.template('controller.php', this.appName + '/Application/' + this.spaceName + '/Controller/IndexController.class.php'),
     { spaceName: this.spaceName };

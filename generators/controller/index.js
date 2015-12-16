@@ -11,15 +11,14 @@ module.exports = generators.Base.extend({
     // And you can then access it later on this way; e.g. CamelCased
     this.classedName = _.startCase(this.classedName);
     this.spaceName = _.startCase(this.spaceName);
-    this.appName = this.config.get('appName');
   },
 
   writing: function () {
-    this.template('controller.php', this.appName + '/Application/' + this.spaceName + '/Controller/' + this.classedName + 'Controller.class.php'),
+    this.template('controller.php', 'Application/' + this.spaceName + '/Controller/' + this.classedName + 'Controller.class.php'),
       { classedName: this.classedName, spaceName: this.spaceName };
-    this.template('view.html', this.appName + '/Application/' + this.spaceName + '/View/'+ this.classedName + '/index.html'),
+    this.template('view.html', 'Application/' + this.spaceName + '/View/'+ this.classedName + '/index.html'),
       { classedName: this.classedName };
-    this.template('_base.html', this.appName + '/Application/' + this.spaceName + '/View/'+ this.classedName + '/base.html'),
+    this.template('_base.html', 'Application/' + this.spaceName + '/View/'+ this.classedName + '/base.html'),
       { classedName: this.classedName };
   },
 });
