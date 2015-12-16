@@ -14,11 +14,11 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.template('controller.php', 'Application/' + this.spaceName + '/Controller/' + this.classedName + 'Controller.class.php'),
+    this.template('controller.php', this.destinationPath('Application/') + this.spaceName + '/Controller/' + this.classedName + 'Controller.class.php'),
       { classedName: this.classedName, spaceName: this.spaceName };
-    this.template('view.html', 'Application/' + this.spaceName + '/View/'+ this.classedName + '/index.html'),
+    this.template('view.html', this.destinationPath('Application/') + this.spaceName + '/View/'+ this.classedName + '/index.html'),
       { classedName: this.classedName };
-    this.template('_base.html', 'Application/' + this.spaceName + '/View/'+ this.classedName + '/base.html'),
+    this.template('_base.html', this.destinationPath('Application/') + this.spaceName + '/View/'+ this.classedName + '/base.html'),
       { classedName: this.classedName };
   },
 });

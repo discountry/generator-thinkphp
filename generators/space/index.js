@@ -15,9 +15,9 @@ module.exports = generators.Base.extend({
 
   writing: function () {
 
-    this.directory('space', 'Application/' + this.spaceName),
+    this.directory('space', this.destinationPath('Application/') + this.spaceName),
     { spaceName: this.spaceName };
-    this.template('controller.php', this.appName + '/Application/' + this.spaceName + '/Controller/IndexController.class.php'),
+    this.template('controller.php', this.destinationPath('Application/') + this.spaceName + '/Controller/IndexController.class.php'),
     { spaceName: this.spaceName };
 
   },

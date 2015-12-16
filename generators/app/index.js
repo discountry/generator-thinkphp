@@ -53,11 +53,16 @@ module.exports = generators.Base.extend({
 	       this.prompt(prompts, function (answers) {
 		      this.appName = answers.name;
 	      	  this.log('Your app name is: ' + chalk.blue.bold(this.appName) + '\n');
-
+	      	  
 		      done();
 		    }.bind(this));
 		  }
 		}.bind(this));
+	},
+
+	paths: function () {
+		
+	    this.destinationRoot(this.appName);
 	},
 
 	configureing: function() {
