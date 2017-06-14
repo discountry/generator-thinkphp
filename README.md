@@ -155,7 +155,7 @@ yo thinkphp:space Admin
 
 ### Serve
 
-运行本地的php测试服务器，此功能例如php自带的测试服务器实现.
+运行本地的php测试服务器，此功能利用php自带的测试服务器实现.
 
 Example:
 ```bash
